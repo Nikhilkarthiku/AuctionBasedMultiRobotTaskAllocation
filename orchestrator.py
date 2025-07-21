@@ -14,6 +14,7 @@ class AgenticPDFProcessor:
 
         print("Reading PDF content...")
         pdf_text = self.pdf_agent.extract_text()
+        all_text = self.pdf_agent.extract_metadata(self.pdf_agent.pdf_path)
         authors = self.pdf_agent.get_authors()
 
         print("Generating summary using LLM...")
